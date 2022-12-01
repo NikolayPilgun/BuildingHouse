@@ -1,3 +1,4 @@
+import bars from "../assets/logo/bars.png";
 import logo from "../assets/logo/logo.png";
 
 export interface IHomeData {
@@ -9,5 +10,9 @@ export const LogoImageData: IHomeData[] = [
 	{
 		name: "Logo",
 		img: logo,
+	},
+	{
+		name: "bars",
+		img: bars,
 	},
 ];

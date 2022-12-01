@@ -1,0 +1,46 @@
+import { useState } from "react";
+import { LogoImageData } from "../../data/logoData";
+import styles from "./header.module.scss";
+
+function Header() {
+	const mobile = window.innerWidth <= 1425 ? true : false;
+	const [menuOpened, setMenuOpened] = useState(false);
+	const menuHeader = [
+		"Главная",
+		"О нас",
+		"Каталог домов",
+		"Материалы",
+		"Услуги",
+		"Галерея",
+		"Контакты",
+	];
+
+	return (
+		<header className={styles.header}>
+			<div className={styles.logo}>
+				<img src={LogoImageData[0].img} alt={LogoImageData[0].name} />
+				<span>YourHouse</span>
+			</div>
+			<div className={styles.phone_number}>
+				<a href="tel:+7(819)342-33-44">+7 (819) 342-33-44</a>
+			</div>
+			<nav className={styles.navigation}>
+				{menuOpened === false && mobile === true ? (
+					<div onClick={() => setMenuOpened(true)} className={styles.bars}>
+						<img src={LogoImageData[1].img} alt={LogoImageData[1].name} />
+					</div>
+				) : (
+					<ul>
+						{menuHeader.map((menu, i) => (
+							<li key={i} onClick={() => setMenuOpened(false)}>
+								{menu}
+							</li>
+						))}
+					</ul>
+				)}
+			</nav>
+		</header>
+	);
+}
+
+export default Header;
