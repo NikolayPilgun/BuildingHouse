@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { LogoImageData } from "../../data/logoData";
+import useWindowDimensions from "../../utils/useWindowDimensions";
 import styles from "./header.module.scss";
 
 function Header() {
-	const mobile = window.innerWidth <= 1425 ? true : false;
+	const { width } = useWindowDimensions();
+	const winDthSize = width ? width : 654;
+	const mobile = winDthSize <= 655 ? true : false;
+
 	const [menuOpened, setMenuOpened] = useState(false);
 	const menuHeader = [
 		"Главная",
@@ -26,17 +30,22 @@ function Header() {
 			</div>
 			<nav className={styles.navigation}>
 				{menuOpened === false && mobile === true ? (
-					<div onClick={() => setMenuOpened(true)} className={styles.bars}>
+					<div className={styles.bars} onClick={() => setMenuOpened(true)}>
 						<img src={LogoImageData[1].img} alt={LogoImageData[1].name} />
 					</div>
 				) : (
-					<ul>
-						{menuHeader.map((menu, i) => (
-							<li key={i} onClick={() => setMenuOpened(false)}>
-								{menu}
-							</li>
-						))}
-					</ul>
+					<>
+						<div className={styles.bars} onClick={() => setMenuOpened(false)}>
+							<img src={LogoImageData[2].img} alt={LogoImageData[2].name} />
+						</div>
+						<ul>
+							{menuHeader.map((menu, i) => (
+								<li key={i} onClick={() => setMenuOpened(false)}>
+									{menu}
+								</li>
+							))}
+						</ul>
+					</>
 				)}
 			</nav>
 		</header>
