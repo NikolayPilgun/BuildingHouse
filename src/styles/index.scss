@@ -1,6 +1,11 @@
 @import "_resetStyles.scss";
 @import "_fonts.scss";
 
+html,
+body {
+	height: 100%;
+}
+
 body {
 	background-color: #fff8f0;
 	color: #3a4691;
@@ -10,9 +15,6 @@ body {
 }
 .App {
 	max-width: 1920px;
+	height: 100%;
 	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	//	align-items: center;
 }

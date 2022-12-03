@@ -7,6 +7,9 @@
 	@media screen and (max-width: 1120px) {
 		gap: 0px 10px;
 	}
+	@media screen and (max-width: 660px) {
+		gap: 0px 5px;
+	}
 }
 
 .logo {
@@ -29,11 +32,17 @@
 	}
 	span {
 		font-size: 18px;
+		@media screen and (max-width: 1120px) {
+			font-size: 14px;
+		}
 		@media screen and (max-width: 731px) {
 			display: none;
 		}
-		@media screen and (max-width: 1120px) {
-			font-size: 14px;
+		@media screen and (max-width: 655px) {
+			display: block;
+		}
+		@media screen and (max-width: 331px) {
+			display: none;
 		}
 	}
 }
@@ -49,6 +58,9 @@
 		@media screen and (max-width: 771px) {
 			font-size: 12px;
 		}
+		@media screen and (max-width: 555px) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -57,11 +69,12 @@
 	justify-content: flex-end;
 	align-items: center;
 	padding: 0px 20px;
-	@media screen and (max-width: 655px) {
-		position: relative;
-	}
 	@media screen and (max-width: 1032px) {
 		padding: 0px 10px;
+	}
+	@media screen and (max-width: 655px) {
+		position: relative;
+		padding: 0px 5px;
 	}
 
 	ul {
@@ -74,8 +87,8 @@
 		}
 		@media screen and (max-width: 655px) {
 			display: block;
-			width: 150px;
-			height: 255px;
+			width: max-content;
+			height: max-content;
 			background: #fff0df;
 			position: absolute;
 			top: 65px;
@@ -97,7 +110,8 @@
 				padding: 0px 3px;
 			}
 			@media screen and (max-width: 655px) {
-				padding: 5px 10px;
+				padding: 10px 20px;
+				font-size: 14px;
 			}
 		}
 		li:hover {
@@ -125,6 +139,7 @@
 		width: 50px;
 		height: 50px;
 		border-radius: 10px;
+		cursor: pointer;
 	}
 	img {
 		margin: auto auto;
