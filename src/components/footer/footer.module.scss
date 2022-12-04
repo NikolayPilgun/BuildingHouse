@@ -8,10 +8,12 @@
 	padding: 10px 10px;
 	@media screen and (max-width: 531px) {
 		font-size: 12px;
+		grid-template-rows: repeat(3, 80px);
 	}
 	@media screen and (max-width: 332px) {
 		gap: 5px 5px;
 		padding: 0px 0px;
+		grid-template-rows: repeat(3, 60px);
 	}
 }
 

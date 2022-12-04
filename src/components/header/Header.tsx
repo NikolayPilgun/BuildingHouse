@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { LogoImageData } from "../../data/logoData";
 import useWindowDimensions from "../../utils/useWindowDimensions";
 import styles from "./header.module.scss";
@@ -9,15 +10,6 @@ function Header() {
 	const mobile = winDthSize <= 655 ? true : false;
 
 	const [menuOpened, setMenuOpened] = useState(false);
-	const menuHeader = [
-		"Главная",
-		"О нас",
-		"Каталог домов",
-		"Материалы",
-		"Услуги",
-		"Галерея",
-		"Контакты",
-	];
 
 	return (
 		<header className={styles.header}>
@@ -39,11 +31,17 @@ function Header() {
 							<img src={LogoImageData[2].img} alt={LogoImageData[2].name} />
 						</div>
 						<ul>
-							{menuHeader.map((menu, i) => (
-								<li key={i} onClick={() => setMenuOpened(false)}>
-									{menu}
-								</li>
-							))}
+							<li onClick={() => setMenuOpened(false)}>
+								<Link to="/">Главная</Link>
+							</li>
+							<li onClick={() => setMenuOpened(false)}>
+								<Link to="/about">О нас</Link>
+							</li>
+							<li onClick={() => setMenuOpened(false)}>Каталог домов</li>
+							<li onClick={() => setMenuOpened(false)}>Материалы</li>
+							<li onClick={() => setMenuOpened(false)}>Услуги</li>
+							<li onClick={() => setMenuOpened(false)}>Галерея</li>
+							<li onClick={() => setMenuOpened(false)}>Контакты</li>
 						</ul>
 					</>
 				)}

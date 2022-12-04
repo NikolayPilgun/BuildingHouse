@@ -102,6 +102,9 @@
 			border-bottom: 5px solid #fff0df;
 			padding: 0px 10px;
 			transition: all 300ms ease;
+			:nth-child(1) {
+				color: #3a4691;
+			}
 			@media screen and (max-width: 1032px) {
 				font-size: 14px;
 			}
