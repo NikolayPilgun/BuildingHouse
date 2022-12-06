@@ -22,6 +22,13 @@ import homeSer2 from "../assets/home/ser_2.png";
 import homeSer3 from "../assets/home/ser_3.png";
 import homeSer4 from "../assets/home/ser_4.png";
 
+export interface IHomeDataBanner {
+	name: string;
+	img: string;
+	title1: string;
+	title2: string;
+	button: string;
+}
 export interface IHomeData {
 	name: string;
 	img: string;
@@ -32,26 +39,41 @@ export interface IHomeDataDes {
 	description: string;
 }
 
-export const HomeDataBaner: IHomeData[] = [
+export const HomeDataBaner: IHomeDataBanner[] = [
 	{
 		name: "homeBaner1",
 		img: homeBaner1,
+		title1: "Элитные дома",
+		title2: "в стиле хай-тек",
+		button: "Подробнее",
 	},
 	{
 		name: "homeBaner2",
 		img: homeBaner2,
+		title1: "Строительство",
+		title2: "домов 'под ключ'",
+		button: "Подробнее",
 	},
 	{
 		name: "homeBaner3",
 		img: homeBaner3,
+		title1: "Коллекция",
+		title2: "авторских проектов",
+		button: "Подробнее",
 	},
 	{
 		name: "homeBaner4",
 		img: homeBaner4,
+		title1: "25 лет опыта",
+		title2: "в строительстве",
+		button: "Подробнее",
 	},
 	{
 		name: "homeBaner5",
 		img: homeBaner5,
+		title1: "Мы лучшие",
+		title2: "в вашей стране",
+		button: "Подробнее",
 	},
 ];
 export const HomeDataCOH: IHomeDataDes[] = [

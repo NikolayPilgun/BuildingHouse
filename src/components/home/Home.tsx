@@ -1,11 +1,11 @@
-import Banner from "./banner/Banner";
 import Contacts from "./contacts/Contacts";
 import styles from "./home.module.scss";
+import SliderBanner from "./sliderBanner/SliderBanner";
 
 function Home() {
 	return (
 		<main className={styles.home}>
-			<Banner />
+			<SliderBanner />
 			<Contacts />
 		</main>
 	);

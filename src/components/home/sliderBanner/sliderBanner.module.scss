@@ -1,0 +1,96 @@
+.carousel {
+	height: 700px;
+	overflow: hidden;
+	position: relative;
+	@media screen and (max-width: 655px) {
+		height: 400px;
+	}
+}
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	transition: all 500ms ease;
+}
+.sliderBanner {
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.content {
+		padding: 70px 10px 10px 70px;
+		@media screen and (max-width: 655px) {
+			padding: 70px 10px 10px 10px;
+			text-align: center;
+		}
+	}
+	.title {
+		margin-bottom: 30px;
+		h1 {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			font-size: 64px;
+			font-weight: 500;
+			@media screen and (max-width: 707px) {
+				font-size: 54px;
+			}
+			@media screen and (max-width: 655px) {
+				font-size: 44px;
+			}
+			@media screen and (max-width: 400px) {
+				font-size: 28px;
+			}
+		}
+	}
+	.button {
+		button {
+			background-color: #2e5768;
+			color: #fff7ed;
+		}
+		button:hover {
+			background-color: #316a82;
+			color: #fbeddc;
+		}
+	}
+}
+
+.arrows {
+	position: absolute;
+	right: 150px;
+	bottom: 150px;
+	z-index: 20;
+	@media screen and (max-width: 655px) {
+		right: 20px;
+		bottom: 20px;
+	}
+
+	button {
+		font-size: 70px;
+		color: #2e5768;
+		cursor: pointer;
+		transition: all 300ms ease;
+		:hover {
+			color: #1286b9;
+		}
+		:active {
+			transform: scale(0.95, 0.95);
+		}
+	}
+	button:disabled {
+		color: rgba(98, 91, 91, 0.8);
+		cursor: none;
+		:hover {
+			color: rgba(98, 91, 91, 0.8);
+		}
+		:active {
+			transform: scale(1, 1);
+		}
+	}
+	.arrowsLeft {
+		padding-right: 10px;
+	}
+	.arrowsRight {
+		padding-left: 10px;
+	}
+}
