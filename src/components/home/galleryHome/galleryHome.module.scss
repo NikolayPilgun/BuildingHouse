@@ -1,0 +1,50 @@
+.galleryHome {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #787a83;
+}
+.title {
+	margin-top: 60px;
+	font-size: 28px;
+	color: #fff7ed;
+	@media screen and (max-width: 400px) {
+		margin-top: 30px;
+		font-size: 16px;
+	}
+}
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	margin: 40px 10px;
+	@media screen and (max-width: 1170px) {
+		gap: 20px;
+		margin: 20px 10px;
+	}
+	@media screen and (max-width: 470px) {
+		margin: 20px 10px;
+	}
+	.column {
+		width: 250px;
+		height: 250px;
+		@media screen and (max-width: 370px) {
+			width: 220px;
+			height: 220px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.button {
+	margin: 30px 10px;
+}

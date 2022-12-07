@@ -28,12 +28,19 @@ export interface IHomeDataBanner {
 	title1: string;
 	title2: string;
 	button: string;
+	path: string;
 }
 export interface IHomeData {
 	name: string;
 	img: string;
 }
 export interface IHomeDataDes {
+	name: string;
+	img: string;
+	description: string;
+	path: string;
+}
+export interface IHomeDataServis {
 	name: string;
 	img: string;
 	description: string;
@@ -46,6 +53,7 @@ export const HomeDataBaner: IHomeDataBanner[] = [
 		title1: "Элитные дома",
 		title2: "в стиле хай-тек",
 		button: "Подробнее",
+		path: "/about",
 	},
 	{
 		name: "homeBaner2",
@@ -53,6 +61,7 @@ export const HomeDataBaner: IHomeDataBanner[] = [
 		title1: "Строительство",
 		title2: "домов 'под ключ'",
 		button: "Подробнее",
+		path: "/about",
 	},
 	{
 		name: "homeBaner3",
@@ -60,6 +69,7 @@ export const HomeDataBaner: IHomeDataBanner[] = [
 		title1: "Коллекция",
 		title2: "авторских проектов",
 		button: "Подробнее",
+		path: "/about",
 	},
 	{
 		name: "homeBaner4",
@@ -67,6 +77,7 @@ export const HomeDataBaner: IHomeDataBanner[] = [
 		title1: "25 лет опыта",
 		title2: "в строительстве",
 		button: "Подробнее",
+		path: "/about",
 	},
 	{
 		name: "homeBaner5",
@@ -74,6 +85,7 @@ export const HomeDataBaner: IHomeDataBanner[] = [
 		title1: "Мы лучшие",
 		title2: "в вашей стране",
 		button: "Подробнее",
+		path: "/about",
 	},
 ];
 export const HomeDataCOH: IHomeDataDes[] = [
@@ -81,16 +93,19 @@ export const HomeDataCOH: IHomeDataDes[] = [
 		name: "homeCOH1",
 		img: homeCOH1,
 		description: "Проект дома CVN - 832",
+		path: "/housecatalog/CVN832",
 	},
 	{
 		name: "homeCOH2",
 		img: homeCOH2,
 		description: "Проект дома PNV - 402",
+		path: "/housecatalog/PNV402",
 	},
 	{
 		name: "homeCOH3",
 		img: homeCOH3,
 		description: "Проект дома XZN - 734",
+		path: "/housecatalog/XZN734",
 	},
 ];
 export const HomeDataMat: IHomeData[] = [
@@ -99,7 +114,7 @@ export const HomeDataMat: IHomeData[] = [
 		img: homeMat1,
 	},
 ];
-export const HomeDataSer: IHomeDataDes[] = [
+export const HomeDataSer: IHomeDataServis[] = [
 	{
 		name: "homeSer1",
 		img: homeSer1,

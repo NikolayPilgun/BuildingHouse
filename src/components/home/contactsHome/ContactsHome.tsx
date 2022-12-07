@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import Button from "../../button/Button";
 import styles from "./contacts.module.scss";
 
-function Contacts() {
+function ContactsHome() {
 	return (
 		<div className={styles.contacts}>
 			<div className={styles.title}>
@@ -16,10 +17,12 @@ function Contacts() {
 				</p>
 			</div>
 			<div className={styles.button}>
-				<Button>Напишите нам !</Button>
+				<Button>
+					<Link to="/contacts">Напишите нам!</Link>
+				</Button>
 			</div>
 		</div>
 	);
 }
 
-export default Contacts;
+export default ContactsHome;

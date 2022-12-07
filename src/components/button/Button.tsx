@@ -1,7 +1,7 @@
 import styles from "./button.module.scss";
 
 type TProps = {
-	children: string;
+	children: any;
 };
 
 const Button: React.FC<TProps> = ({ children }) => {
