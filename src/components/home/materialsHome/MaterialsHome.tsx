@@ -3,7 +3,7 @@ import { HomeDataMat } from "../../../data/homeData";
 import Button from "../../button/Button";
 import styles from "./materials.module.scss";
 
-function Materials() {
+function MaterialsHome() {
 	return (
 		<div
 			className={styles.materials}
@@ -23,4 +23,4 @@ function Materials() {
 	);
 }
 
-export default Materials;
+export default MaterialsHome;

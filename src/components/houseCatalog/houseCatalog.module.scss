@@ -81,6 +81,22 @@
 		img {
 			width: 700px;
 			height: 500px;
+			@media screen and (max-width: 1430px) {
+				width: 600px;
+				height: 400px;
+			}
+			@media screen and (max-width: 1230px) {
+				width: 500px;
+				height: 300px;
+			}
+			@media screen and (max-width: 1030px) {
+				width: 400px;
+				height: 200px;
+			}
+			@media screen and (max-width: 830px) {
+				width: 600px;
+				height: 400px;
+			}
 			@media screen and (max-width: 720px) {
 				width: 500px;
 				height: 300px;

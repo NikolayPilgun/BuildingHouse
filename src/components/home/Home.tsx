@@ -2,7 +2,8 @@ import CatalogHome from "./catalogHome/CatalogHome";
 import ContactsHome from "./contactsHome/ContactsHome";
 import GalleryHome from "./galleryHome/GalleryHome";
 import styles from "./home.module.scss";
-import Materials from "./materials/Materials";
+import MaterialsHome from "./materialsHome/MaterialsHome";
+
 import ServicesHome from "./servicesHome/ServicesHome";
 import SliderBanner from "./sliderBanner/SliderBanner";
 
@@ -12,7 +13,7 @@ function Home() {
 			<SliderBanner />
 			<ContactsHome />
 			<CatalogHome />
-			<Materials />
+			<MaterialsHome />
 			<ServicesHome />
 			<GalleryHome />
 		</main>
