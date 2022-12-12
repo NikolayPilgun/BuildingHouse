@@ -3,34 +3,27 @@ import React from "react";
 
 const containerStyle = {
 	width: "100%",
-	height: "400px",
+	height: "100%",
 };
-
 const center = {
 	lat: -3.745,
 	lng: -38.523,
 };
 
-function GoogleCard() {
+export const GoogleCard = () => {
 	const { isLoaded } = useJsApiLoader({
 		id: "google-map-script",
-		googleMapsApiKey: "YOUR_API_KEY",
+		googleMapsApiKey: "AIzaSyDWC0vKSbB2RYtHeVczxk45So0K4tU7uz4",
 	});
-
-	const [map, setMap] = React.useState(null);
+	const mapRef: any = React.useRef(undefined);
 
 	const onLoad = React.useCallback(function callback(map: any) {
-		// This is just an example of getting and using the map instance!!! don't just blindly copy!
-		const bounds = new window.google.maps.LatLngBounds(center);
-		map.fitBounds(bounds);
-
-		setMap(map);
+		mapRef.current = map;
 	}, []);
 
 	const onUnmount = React.useCallback(function callback(map: any) {
-		setMap(null);
+		mapRef.current = undefined;
 	}, []);
-
 	return isLoaded ? (
 		<GoogleMap
 			mapContainerStyle={containerStyle}
@@ -45,6 +38,4 @@ function GoogleCard() {
 	) : (
 		<></>
 	);
-}
-
-export default React.memo(GoogleCard);
+};

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ContactsData } from "../../data/contactsData";
 import Button from "../button/Button";
 import styles from "./contacts.module.scss";
-import GoogleCard from "./googleCard/GoogleCard";
+import { GoogleCard } from "./googleCard/GoogleCard";
 
 function Contacts() {
 	const [mapOnClick, setMapOnClick] = useState(false);
