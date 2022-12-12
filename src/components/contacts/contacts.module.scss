@@ -34,11 +34,93 @@
 }
 .content {
 	display: grid;
-	grid-template-columns: minmax(220px, auto) minmax(220px, 700px);
+	grid-template-columns: minmax(220px, auto) minmax(220px, 500px);
 	grid-template-rows: auto;
 	gap: 20px 20px;
-	margin-bottom: 30px;
-	@media screen and (max-width: 450px) {
-		gap: 10px 10px;
+	width: 80%;
+	margin: 20px auto 40px auto;
+	@media screen and (max-width: 850px) {
+		width: 90%;
 	}
+	@media screen and (max-width: 660px) {
+		width: 95%;
+		grid-template-columns: minmax(220px, auto);
+		grid-template-rows: auto auto;
+		justify-items: center;
+	}
+
+	.address {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		font-size: 16px;
+		@media screen and (max-width: 660px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+		.city {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+	}
+	.form {
+		width: 100%;
+		justify-self: end;
+		form {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			.formText,
+			.formTextarea {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				input,
+				textarea {
+					font-size: 16px;
+					border: none;
+					border-radius: 10px;
+					background-color: #f3f0e7;
+					color: #3a4691;
+					padding: 5px 15px;
+					transition: all 0.4s ease-out;
+				}
+				input {
+					height: 50px;
+				}
+
+				textarea {
+					height: 250px;
+				}
+				input:focus,
+				textarea:focus {
+					background-color: #787a83;
+					color: #fff7ed;
+					outline: 0;
+				}
+			}
+			.formRadio {
+				display: flex;
+				legend {
+					margin-right: 30px;
+					@media screen and (max-width: 660px) {
+						margin-right: 10px;
+					}
+				}
+				input {
+					margin-right: 5px;
+				}
+				label {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}
+.map {
+	width: 100%;
+	height: 100%;
 }

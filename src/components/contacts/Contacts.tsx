@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { ContactsData } from "../../data/contactsData";
 import Button from "../button/Button";
 import styles from "./contacts.module.scss";
+import GoogleCard from "./googleCard/GoogleCard";
 
 function Contacts() {
+	const [mapOnClick, setMapOnClick] = useState(false);
+
+	const onClickMap = () => {
+		setMapOnClick(!mapOnClick);
+	};
 	return (
 		<div className={styles.contacts}>
 			<div
@@ -18,21 +25,21 @@ function Contacts() {
 			</div>
 			<div className={styles.content}>
 				<div className={styles.address}>
-					<div className={styles.city1}>
+					<div className={styles.city}>
 						<span>Санкт-Петербург</span>
 						<span>1234567, ул. Ленина, д.55</span>
 						<span>Отдел продаж: +7 (811) 111-11-11 </span>
 						<span>Отдел рекламы: +7 (811) 111-22-22 </span>
 						<span>E-mail: contact@yourhouse.ru</span>
 					</div>
-					<div className={styles.city2}>
+					<div className={styles.city}>
 						<span>Москва</span>
 						<span>1234567, ул. Ленина, д.44</span>
 						<span>Отдел продаж: +7 (811) 111-11-11 </span>
 						<span>Отдел рекламы: +7 (811) 111-22-22 </span>
 						<span>E-mail: contact@yourhouse.ru</span>
 					</div>
-					<div className={styles.city3}>
+					<div className={styles.city}>
 						<span>Екатеринбург</span>
 						<span>1234567, ул. Ленина, д.66</span>
 						<span>Отдел продаж: +7 (811) 111-11-11 </span>
@@ -56,9 +63,9 @@ function Contacts() {
 						</div>
 						<div className={styles.formRadio}>
 							<legend>С участком</legend>
-							<input type="radio" id="yes" name="drone" value="yes" checked />
+							<input type="radio" id="yes" name="drone" value="yes" />
 							<label htmlFor="yes">да</label>
-							<input type="radio" id="no" name="drone" value="no" checked />
+							<input type="radio" id="no" name="drone" value="no" />
 							<label htmlFor="no">нет</label>
 						</div>
 						<div className={styles.formTextarea}>
@@ -71,7 +78,18 @@ function Contacts() {
 					</form>
 				</div>
 			</div>
-			<div className={styles.map}></div>
+			<div className={styles.map} onClick={onClickMap}>
+				{mapOnClick ? (
+					<GoogleCard />
+				) : (
+					<div
+						style={{
+							backgroundImage: ` url(${ContactsData[1].img})`,
+						}}
+						className={styles.banner}
+					></div>
+				)}
+			</div>
 		</div>
 	);
 }
