@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ContactsData } from "../../data/contactsData";
-import Button from "../button/Button";
 import styles from "./contacts.module.scss";
+import ContactsForm from "./form/ContactsForm";
 import { GoogleCard } from "./googleCard/GoogleCard";
 
 function Contacts() {
@@ -48,34 +48,7 @@ function Contacts() {
 					</div>
 				</div>
 				<div className={styles.form}>
-					<form>
-						<div className={styles.formText}>
-							<label htmlFor="name">ФИО</label>
-							<input id="name" type="text" />
-						</div>
-						<div className={styles.formText}>
-							<label htmlFor="tel">Телефон</label>
-							<input id="tel" type="tel" />
-						</div>
-						<div className={styles.formText}>
-							<label htmlFor="email">E-mail </label>
-							<input id="email" type="email" />
-						</div>
-						<div className={styles.formRadio}>
-							<legend>С участком</legend>
-							<input type="radio" id="yes" name="drone" value="yes" />
-							<label htmlFor="yes">да</label>
-							<input type="radio" id="no" name="drone" value="no" />
-							<label htmlFor="no">нет</label>
-						</div>
-						<div className={styles.formTextarea}>
-							<label htmlFor="message">Сообщение</label>
-							<textarea id="message"></textarea>
-						</div>
-						<div className={styles.button}>
-							<Button>Отправить</Button>
-						</div>
-					</form>
+					<ContactsForm />
 				</div>
 			</div>
 			<div className={styles.map} onClick={onClickMap}>
