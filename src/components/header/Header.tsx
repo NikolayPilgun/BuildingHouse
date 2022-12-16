@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { LogoImageData } from "../../data/logoData";
 import { NavigationData } from "../../data/navigationData";
 import useWindowDimensions from "../../utils/useWindowDimensions";
@@ -33,7 +33,7 @@ function Header() {
 						<ul>
 							{NavigationData.map((menu, i) => (
 								<li key={i} onClick={() => setMenuOpened(false)}>
-									<Link to={menu.path}>{menu.name}</Link>
+									<NavLink to={menu.path}>{menu.name}</NavLink>
 								</li>
 							))}
 						</ul>

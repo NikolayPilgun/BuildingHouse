@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HCBanerData, HouseCatalogData } from "../../data/catalogData";
 import styles from "./houseCatalog.module.scss";
 
 function HouseCatalog() {
+	const [catalogHouse, setCatalogHouse] = useState(HouseCatalogData);
+
+	const onClickFilter = (data: string) => {
+		let filterHouse = HouseCatalogData.filter((card) => card.filter === data);
+		setCatalogHouse(filterHouse);
+	};
 	return (
 		<div className={styles.houseCatalog}>
 			<div
@@ -25,13 +32,31 @@ function HouseCatalog() {
 					</p>
 				</div>
 				<div className={styles.filter}>
-					<span>Проект дома тип - CVN</span>
-					<span>Проект дома тип - PNV</span>
-					<span>Проект дома тип - XZN</span>
+					<span
+						onClick={() => {
+							onClickFilter("CVN");
+						}}
+					>
+						Проект дома тип - CVN
+					</span>
+					<span
+						onClick={() => {
+							onClickFilter("PNV");
+						}}
+					>
+						Проект дома тип - PNV
+					</span>
+					<span
+						onClick={() => {
+							onClickFilter("XZN");
+						}}
+					>
+						Проект дома тип - XZN
+					</span>
 				</div>
 			</div>
 			<div className={styles.content}>
-				{HouseCatalogData.map((items, i) => (
+				{catalogHouse.map((items, i) => (
 					<div key={i} className={styles.item}>
 						<Link to={items.type}>
 							<img src={items.img} alt={items.name} />

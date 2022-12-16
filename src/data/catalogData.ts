@@ -23,6 +23,7 @@ export interface IHouseCatalogData {
 	img: string;
 	description: string;
 	type: string;
+	filter: string;
 }
 
 export const HCBanerData: IHCBanerData[] = [
@@ -38,83 +39,97 @@ export const HouseCatalogData: IHouseCatalogData[] = [
 		img: HouseCata1,
 		description: "Проект дома CVN - 402",
 		type: "CVN402",
+		filter: "CVN",
 	},
 	{
 		name: "HouseCata2",
 		img: HouseCata2,
 		description: "Проект дома PNV - 133",
 		type: "PNV133",
+		filter: "PNV",
 	},
 	{
 		name: "HouseCata3",
 		img: HouseCata3,
 		description: "Проект дома XZN - 298",
 		type: "XZN298",
+		filter: "XZN",
 	},
 	{
 		name: "HouseCata4",
 		img: HouseCata4,
 		description: "Проект дома CVN - 512",
 		type: "CVN512",
+		filter: "CVN",
 	},
 	{
 		name: "HouseCata5",
 		img: HouseCata5,
 		description: "Проект дома XZN - 111",
 		type: "XZN111",
+		filter: "XZN",
 	},
 	{
 		name: "HouseCata6",
 		img: HouseCata6,
 		description: "Проект дома PNV - 232",
 		type: "PNV232",
+		filter: "PNV",
 	},
 	{
 		name: "HouseCata7",
 		img: HouseCata7,
 		description: "Проект дома CVN - 342",
 		type: "CVN342",
+		filter: "CVN",
 	},
 	{
 		name: "HouseCata8",
 		img: HouseCata8,
 		description: "Проект дома CVN - 332",
 		type: "CVN332",
+		filter: "CVN",
 	},
 	{
 		name: "HouseCata9",
 		img: HouseCata9,
 		description: "Проект дома PNV - 414",
 		type: "PNV414",
+		filter: "PNV",
 	},
 	{
 		name: "HouseCata10",
 		img: HouseCata10,
 		description: "Проект дома PNV - 542",
 		type: "PNV542",
+		filter: "PNV",
 	},
 	{
 		name: "HouseCata11",
 		img: HouseCata11,
 		description: "Проект дома XZN - 189",
 		type: "XZN189",
+		filter: "XZN",
 	},
 	{
 		name: "HouseCata12",
 		img: HouseCata12,
 		description: "Проект дома XZN - 212",
 		type: "XZN212",
+		filter: "XZN",
 	},
 	{
 		name: "HouseCata13",
 		img: HouseCata13,
 		description: "Проект дома PNV - 872",
 		type: "PNV872",
+		filter: "PNV",
 	},
 	{
 		name: "HouseCata14",
 		img: HouseCata14,
 		description: "Проект дома XZN - 873",
 		type: "XZN873",
+		filter: "XZN",
 	},
 ];
