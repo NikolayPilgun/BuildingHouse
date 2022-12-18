@@ -1,7 +1,23 @@
+import { useState } from "react";
+import { Grid, Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/grid";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { GalleryBanerData, GalleryData } from "../../data/galleryData";
 import styles from "./gallery.module.scss";
+import GalleryPopup from "./galleryPopup/GalleryPopup";
+import "./sliderGallery.css";
 
 function Gallery() {
+	let [isOpen, setIsOpen] = useState(false);
+	const [offset, setOffset] = useState(0);
+
+	const onClickImgItem = (index: number) => {
+		setOffset(index);
+		setIsOpen(true);
+	};
 	return (
 		<div className={styles.gallery}>
 			<div
@@ -27,18 +43,57 @@ function Gallery() {
 					</p>
 				</div>
 			</div>
-			<div className={styles.container}>
-				{GalleryData.map((item, i) => (
-					<div key={i} className={styles.slid}>
-						<img src={item.img} alt={item.name} />
-					</div>
-				))}
+
+			<div className="sliderGallery">
+				<Swiper
+					slidesPerView={3}
+					grid={{
+						rows: 2,
+					}}
+					spaceBetween={30}
+					pagination={{
+						clickable: true,
+					}}
+					modules={[Grid, Pagination, Navigation]}
+					navigation={true}
+					className="mySwiper"
+					breakpoints={{
+						// when window width is >= 700px
+						700: {
+							slidesPerView: 3,
+						},
+						// when window width is >= 450px
+						450: {
+							slidesPerView: 2,
+						},
+						// when window width is >= 300px
+						300: {
+							slidesPerView: 1,
+						},
+						// when window width is >= 0px
+						0: {
+							slidesPerView: 1,
+						},
+					}}
+				>
+					{GalleryData.map((item, i) => (
+						<SwiperSlide key={i}>
+							<img
+								src={item.img}
+								alt={item.name}
+								onClick={() => onClickImgItem(i)}
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
 			</div>
-			<div className={styles.sabNav}>
-				<span>1</span>
-				<span>2</span>
-				<span>3</span>
-			</div>
+			{isOpen && (
+				<GalleryPopup
+					offset={offset}
+					setOffset={setOffset}
+					setIsOpen={setIsOpen}
+				/>
+			)}
 		</div>
 	);
 }
