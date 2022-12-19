@@ -91,6 +91,7 @@ function Gallery() {
 				<GalleryPopup
 					offset={offset}
 					setOffset={setOffset}
+					isOpen={isOpen}
 					setIsOpen={setIsOpen}
 				/>
 			)}
