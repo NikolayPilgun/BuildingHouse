@@ -1,0 +1,95 @@
+.carousel {
+	width: 100%;
+	height: 700px;
+	position: relative;
+	overflow: hidden;
+	@media screen and (max-width: 655px) {
+		height: 400px;
+	}
+}
+
+.sliderBanner {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	img {
+		position: absolute;
+		width: cover;
+	}
+}
+
+.content {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	z-index: 99;
+	// padding: 70px 10px 10px 70px;
+	// @media screen and (max-width: 655px) {
+	// 	padding: 70px 10px 10px 10px;
+	// 	text-align: center;
+	// }
+}
+.title {
+	margin-bottom: 30px;
+	h1 {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		font-size: 64px;
+		font-weight: 500;
+		@media screen and (max-width: 707px) {
+			font-size: 54px;
+		}
+		@media screen and (max-width: 655px) {
+			font-size: 44px;
+		}
+		@media screen and (max-width: 400px) {
+			font-size: 28px;
+		}
+	}
+}
+.button {
+	button {
+		background-color: #2e5768;
+	}
+	button:hover {
+		background-color: #316a82;
+	}
+}
+
+.arrows {
+	position: absolute;
+	right: 150px;
+	bottom: 150px;
+	z-index: 20;
+
+	@media screen and (max-width: 655px) {
+		right: 20px;
+		bottom: 20px;
+	}
+
+	button {
+		font-size: 70px;
+		color: #580512;
+		cursor: pointer;
+
+		:nth-child(1) {
+			transition: all 400ms ease;
+		}
+		:hover {
+			color: orange;
+		}
+		:active {
+			transform: scale(0.95, 0.95);
+		}
+	}
+
+	.arrowsLeft {
+		padding-right: 10px;
+	}
+	.arrowsRight {
+		padding-left: 10px;
+	}
+}

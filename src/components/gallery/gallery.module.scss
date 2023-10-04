@@ -1,0 +1,41 @@
+.gallery {
+	width: 100%;
+	height: 100%;
+}
+.banner {
+	width: 100%;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media screen and (max-width: 655px) {
+		height: 300px;
+	}
+}
+.header {
+	width: 80%;
+	margin: 20px auto;
+	@media screen and (max-width: 850px) {
+		width: 90%;
+	}
+	@media screen and (max-width: 655px) {
+		width: 95%;
+	}
+	.title {
+		margin-bottom: 20px;
+		h2 {
+			font-size: 28px;
+			@media screen and (max-width: 850px) {
+				font-size: 24px;
+			}
+		}
+	}
+	.text {
+		p {
+			font-size: 16px;
+			@media screen and (max-width: 850px) {
+				font-size: 14px;
+			}
+		}
+	}
+}

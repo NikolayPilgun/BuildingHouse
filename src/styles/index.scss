@@ -1,0 +1,35 @@
+@import "_resetStyles.scss";
+@import "_fonts.scss";
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: #fff8f0;
+	color: #3a4691;
+	font-family: "Raleway", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+.App {
+	max-width: 1920px;
+	height: 100%;
+	margin: 0 auto;
+}
+.active {
+	color: #580512 !important;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 6px;
+		height: 3px;
+		width: 100%;
+		background-color: #560917;
+		@media screen and (max-width: 655px) {
+			bottom: -7px;
+		}
+	}
+}

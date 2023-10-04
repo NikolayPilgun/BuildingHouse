@@ -1,0 +1,81 @@
+.contacts {
+	width: 100%;
+	height: 100%;
+
+	.banner {
+		width: 100%;
+		height: 500px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@media screen and (max-width: 655px) {
+			height: 300px;
+		}
+	}
+}
+.header {
+	width: 80%;
+	margin: 20px auto;
+	@media screen and (max-width: 850px) {
+		width: 90%;
+	}
+	@media screen and (max-width: 655px) {
+		width: 95%;
+	}
+	.title {
+		margin-bottom: 20px;
+		h2 {
+			font-size: 28px;
+			@media screen and (max-width: 850px) {
+				font-size: 24px;
+			}
+		}
+	}
+}
+.content {
+	display: grid;
+	grid-template-columns: minmax(220px, auto) minmax(220px, 500px);
+	grid-template-rows: auto;
+	gap: 20px 20px;
+	width: 80%;
+	margin: 20px auto 40px auto;
+	@media screen and (max-width: 850px) {
+		width: 90%;
+	}
+	@media screen and (max-width: 660px) {
+		width: 95%;
+		grid-template-columns: minmax(220px, auto);
+		grid-template-rows: auto auto;
+		justify-items: center;
+	}
+
+	.address {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		font-size: 16px;
+		@media screen and (max-width: 660px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+		.city {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+	}
+	.form {
+		width: 100%;
+		justify-self: end;
+	}
+}
+.map {
+	width: 100%;
+	height: 400px;
+	cursor: pointer;
+	@media screen and (max-width: 655px) {
+		height: 300px;
+	}
+}

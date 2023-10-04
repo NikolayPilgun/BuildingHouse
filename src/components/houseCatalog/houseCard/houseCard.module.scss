@@ -1,0 +1,102 @@
+.houseCard {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 50px 0px;
+	color: #333b72;
+}
+.title {
+	text-align: center;
+	font-size: 33px;
+	margin-bottom: 40px;
+	h2 {
+		margin-bottom: 10px;
+	}
+}
+
+.text1 {
+	margin-bottom: 60px;
+	width: 80%;
+	p {
+		text-align: center;
+		font-size: 16px;
+	}
+}
+.subTitle {
+	margin-bottom: 30px;
+	h3 {
+		font-size: 24px;
+	}
+}
+.characteristics {
+	width: 90%;
+	display: grid;
+	grid-template-columns: minmax(250px, 350px) minmax(500px, auto);
+	grid-template-rows: auto auto;
+	gap: 20px 30px;
+	font-size: 16px;
+	@media screen and (max-width: 850px) {
+		grid-template-columns: minmax(220px, auto);
+		grid-template-rows: auto auto;
+		gap: 10px 10px;
+	}
+	.left {
+		height: 300px;
+		background-color: #fff4e7;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media screen and (max-width: 850px) {
+			height: 200px;
+		}
+		@media screen and (max-width: 450px) {
+			height: 250px;
+		}
+		p {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			border-bottom: 1px solid #333b72;
+			padding-bottom: 5px;
+		}
+	}
+	.right {
+		flex: 1 1;
+		height: 300px;
+		margin: 10px 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 30px;
+		@media screen and (max-width: 1000px) {
+			flex: 1 0;
+			height: 100%;
+			gap: 20px;
+			margin: 10px 20px;
+		}
+		@media screen and (max-width: 320px) {
+			max-width: 100%;
+		}
+	}
+	.button {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		@media screen and (max-width: 1000px) {
+			justify-content: center;
+		}
+	}
+}
+
+.slider {
+	margin: 20px 10px 60px 10px;
+	width: 100%;
+	height: 100%;
+}
