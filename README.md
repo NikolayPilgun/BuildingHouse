@@ -1,6 +1,6 @@
 [![Header](https://github.com/NikolayPilgun/Portfolio/blob/main/src/data/dataImg/buildingHouse/buildingHouse1.svg)](https://nikolaypilgun.ru/buildingHouse)
 
-# Вид сайта — Корпоративный web-сайт. Тема — Строительная компания.
+# Тип сайта — Корпоративный web-сайт. Тема — Строительная компания.
 
 ## Данный проект является тренировочным.
 
